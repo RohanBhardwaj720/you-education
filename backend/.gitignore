@@ -1,7 +1,0 @@
-poetry.lock
-**/__pycache__/
-.env
-prompt.txt
-temp.ipynb
-temp.py
-app.log
