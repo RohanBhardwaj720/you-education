@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, User, LogOut, Settings, UserCircle } from "lucide-react";
+import { Sun, Moon, LogOut, UserCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 import {
@@ -84,21 +84,6 @@ export default function Navbar() {
                   </div>
                   <div className="h-px bg-gray-200 dark:bg-gray-800 my-1"></div>
                   <div className="grid gap-1">
-                    <Link 
-                      href="/profile" 
-                      className="flex items-center gap-2 rounded px-2 py-1.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    >
-                      <User className="h-4 w-4" />
-                      <span>Profile</span>
-                    </Link>
-                    <Link 
-                      href="/settings" 
-                      className="flex items-center gap-2 rounded px-2 py-1.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    >
-                      <Settings className="h-4 w-4" />
-                      <span>Settings</span>
-                    </Link>
-                    <div className="h-px bg-gray-200 dark:bg-gray-800 my-1"></div>
                     <button
                       onClick={() => signOut()}
                       className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
